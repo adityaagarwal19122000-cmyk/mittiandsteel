@@ -106,3 +106,6 @@ section{padding-block:76px}
 #site-footer p{font-size:.92rem;margin:0 0 8px}
 #site-footer .fine{border-top:1px solid rgba(244,239,228,.18);margin-top:38px;padding-top:20px;font-size:.8rem;color:#A9A491;max-width:none}
 .soon{color:#8F8B79;font-size:.9rem}
+
+/* small screens */
+@media(max-width:560px){.nav{padding-block:12px}.nav nav{gap:4px 16px}.nav nav a{font-size:.68rem;letter-spacing:.1em}.brand{font-size:1.45rem}.hero .wrap{padding-block:48px 56px}section{padding-block:56px}}
