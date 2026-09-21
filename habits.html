@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Habit Library | Mitti &amp; Steel</title>
+<meta name="description" content="Everyday Indian habits, each rated Well supported, Some evidence, or Tradition not yet proven.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.svg" alt="">Mitti &amp; Steel</a>
+<nav><a class="on" href="habits.html">Habit Library</a><a href="book.html">The Book</a><a href="newsletter.html">Newsletter</a><a href="about.html">About</a></nav></div></header>
+<main><div class="wrap">
+  <section>
+    <h1>Habit Library</h1>
+    <p class="lead">Each habit gets a page once we have opened and checked the sources. Until then it is marked <span class="tag t-wip">In fact-check</span>. We would rather publish fewer pages than unchecked ones.</p>
+  </section>
+  <div id="lib"></div>
+</div></main>
+<footer><div class="wrap"><p>&copy; Mitti &amp; Steel. Educational content only, not medical advice.</p></div></footer>
+<script>
+var groups = {
+  "Kitchen and table": ["Clay pot water","The steel thali","Eating with your hands","Eating slowly, without screens","Ghee in moderation","Cooking in an iron kadhai","Curd and chaas","Soaked and fermented foods","Haldi milk","After-meal spices (saunf, jeera, ajwain)","Tulsi and ginger tea","Copper vessel water","Seasonal eating"],
+  "Body and movement": ["Barefoot morning walks","Morning sunlight","Walking after meals","Floor sitting","A simple yoga sequence","Surya namaskar","Slow breathing","Sesame oil massage","Tongue scraping and oil pulling"],
+  "Daily rhythm": ["Early dinners","Winding down and early sleep"]
+};
+var out = "";
+Object.keys(groups).forEach(function (g) {
+  out += "<section><h2>" + g + "</h2><div class='grid'>";
+  groups[g].forEach(function (h) {
+    out += "<div class='card'><span class='tag t-wip'>In fact-check</span><h3>" + h + "</h3><p>Page coming once the sources are checked.</p></div>";
+  });
+  out += "</div></section>";
+});
+document.getElementById("lib").innerHTML = out;
+</script>
+</body>
+</html>
