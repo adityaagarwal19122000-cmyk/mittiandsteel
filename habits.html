@@ -16,7 +16,7 @@
 <div class="page-head"><div class="wrap">
   <span class="eyebrow">The Habit Library</span>
   <h1>Every habit, checked.</h1>
-  <p class="lead">A habit earns its page only after we have opened and read the sources. Until then it is marked in fact-check. We would rather publish fewer pages than unchecked ones.</p>
+  <p class="lead">Every habit gets one honest label: Well supported, Some evidence, or Tradition, not yet proven. A habit gets its label only after we have opened and read the sources. Until then it is marked in fact-check.</p>
 </div></div>
 <section><div class="wrap" id="lib"></div></section>
 </main>
@@ -27,11 +27,22 @@ var groups = {
   "Body and movement": ["Barefoot morning walks","Morning sunlight","Walking after meals","Floor sitting","A simple yoga sequence","Surya namaskar","Slow breathing","Sesame oil massage","Tongue scraping and oil pulling"],
   "Daily rhythm": ["Early dinners","Winding down and early sleep"]
 };
+var labels = {
+  "Clay pot water": "Well supported (cooling)",
+  "The steel thali": "A practical choice",
+  "Eating with your hands": "Tradition, not yet proven",
+  "Eating slowly, without screens": "Some evidence",
+  "Ghee in moderation": "Some evidence",
+  "Barefoot morning walks": "Some evidence",
+  "Morning sunlight": "Some evidence",
+  "Walking after meals": "Well supported (short term)",
+  "Floor sitting": "Some evidence"
+};
 var out = "";
 Object.keys(groups).forEach(function (g) {
   out += "<div class='hgroup'><h2>" + g + "</h2><ul class='hlist'>";
   groups[g].forEach(function (h) {
-    out += "<li><span>" + h + "</span><span class='st'>In fact-check</span></li>";
+    out += "<li><span>" + h + "</span><span class='st'>" + (labels[h] || "In fact-check") + "</span></li>";
   });
   out += "</ul></div>";
 });
