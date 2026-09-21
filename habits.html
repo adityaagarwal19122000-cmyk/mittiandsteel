@@ -6,20 +6,21 @@
 <title>Habit Library | Mitti &amp; Steel</title>
 <meta name="description" content="Everyday Indian habits, each rated Well supported, Some evidence, or Tradition not yet proven.">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.svg" alt="">Mitti &amp; Steel</a>
-<nav><a class="on" href="habits.html">Habit Library</a><a href="book.html">The Book</a><a href="newsletter.html">Newsletter</a><a href="about.html">About</a></nav></div></header>
-<main><div class="wrap">
-  <section>
-    <h1>Habit Library</h1>
-    <p class="lead">Each habit gets a page once we have opened and checked the sources. Until then it is marked <span class="tag t-wip">In fact-check</span>. We would rather publish fewer pages than unchecked ones.</p>
-  </section>
-  <div id="lib"></div>
-</div></main>
-<footer><div class="wrap"><p>&copy; Mitti &amp; Steel. Educational content only, not medical advice.</p></div></footer>
+<header id="site-header"></header>
+<main>
+<div class="page-head"><div class="wrap">
+  <span class="eyebrow">The Habit Library</span>
+  <h1>Every habit, checked.</h1>
+  <p class="lead">A habit earns its page only after we have opened and read the sources. Until then it is marked in fact-check. We would rather publish fewer pages than unchecked ones.</p>
+</div></div>
+<section><div class="wrap" id="lib"></div></section>
+</main>
+<footer id="site-footer"></footer>
 <script>
 var groups = {
   "Kitchen and table": ["Clay pot water","The steel thali","Eating with your hands","Eating slowly, without screens","Ghee in moderation","Cooking in an iron kadhai","Curd and chaas","Soaked and fermented foods","Haldi milk","After-meal spices (saunf, jeera, ajwain)","Tulsi and ginger tea","Copper vessel water","Seasonal eating"],
@@ -28,13 +29,14 @@ var groups = {
 };
 var out = "";
 Object.keys(groups).forEach(function (g) {
-  out += "<section><h2>" + g + "</h2><div class='grid'>";
+  out += "<div class='hgroup'><h2>" + g + "</h2><ul class='hlist'>";
   groups[g].forEach(function (h) {
-    out += "<div class='card'><span class='tag t-wip'>In fact-check</span><h3>" + h + "</h3><p>Page coming once the sources are checked.</p></div>";
+    out += "<li><span>" + h + "</span><span class='st'>In fact-check</span></li>";
   });
-  out += "</div></section>";
+  out += "</ul></div>";
 });
 document.getElementById("lib").innerHTML = out;
 </script>
+<script src="script.js"></script>
 </body>
 </html>
