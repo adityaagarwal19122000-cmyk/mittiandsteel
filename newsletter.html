@@ -6,29 +6,29 @@
 <title>Newsletter | Mitti &amp; Steel</title>
 <meta name="description" content="The Old Habits Club: one email a week with an Indian habit, a myth, and an honest look at the evidence.">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="index.html"><img src="logo.svg" alt="">Mitti &amp; Steel</a>
-<nav><a href="habits.html">Habit Library</a><a href="book.html">The Book</a><a class="on" href="newsletter.html">Newsletter</a><a href="about.html">About</a></nav></div></header>
-<main><div class="wrap"><section>
-  <h1>The Old Habits Club</h1>
-  <p class="lead">One short email a week. No hype, no miracle cures.</p>
-  <div class="grid">
-    <div class="card"><h3>A habit</h3><p>One everyday Indian habit, explained simply.</p></div>
-    <div class="card"><h3>A myth</h3><p>One popular claim, checked against the research.</p></div>
-    <div class="card"><h3>Your question</h3><p>One reader question answered each week.</p></div>
+<header id="site-header"></header>
+<main>
+<div class="page-head"><div class="wrap">
+  <span class="eyebrow">The Old Habits Club</span>
+  <h1>One email a week. No hype.</h1>
+  <p class="lead">A habit explained simply, a popular claim checked against the research, and one reader question answered.</p>
+</div></div>
+<section><div class="wrap">
+  <div class="letter">
+    <h2>Join free</h2>
+    <p>You will receive the Evidence Cheat-Sheet when it is ready, and hear first when the book launches.</p>
+    <form class="signup-form"><input type="email" id="email-news" name="email" placeholder="Your email address" required aria-label="Email address"><button class="btn dark" type="submit">Join free</button></form>
+    <div id="msg"></div>
+    <p class="note">No spam. Unsubscribe any time.</p>
   </div>
-</section>
-<section><div class="signup">
-  <h2>Join free</h2>
-  <p>You will get the Evidence Cheat-Sheet when it is ready and hear first when the book launches.</p>
-  <form class="signup-form"><input type="email" name="email" placeholder="you@example.com" required aria-label="Email address"><button class="btn" type="submit">Join free</button></form>
-  <div id="msg"></div>
-  <p class="note">No spam. Unsubscribe any time.</p>
-</div></section></div></main>
-<footer><div class="wrap"><p>&copy; Mitti &amp; Steel. Educational content only, not medical advice.</p></div></footer>
+</div></section>
+</main>
+<footer id="site-footer"></footer>
 <script src="script.js"></script>
 </body>
 </html>
